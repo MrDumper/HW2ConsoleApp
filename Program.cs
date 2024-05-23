@@ -3,16 +3,20 @@
     private static void Main(string[] args)
     {
         string? fullName;
+        string? email;
         int age;
         double mathPoints;
         double physicsPoints;
         double programingPoints;
-        string patternOutputLine = "ФИО: {0, 15} \nМатематика: {1, 8} \nФизика: {2, 12} \nИнформатика: {3, 7}";
+        string patternOutputLine = "ФИО: {0, 15} \nEmail: {1, 13} \nМатематика: {2, 8} \nФизика: {3, 12} \nИнформатика: {4, 7}";
         double GPA;
 
         
         Console.WriteLine("Введите своё ФИО: ");
-        fullName = Console.ReadLine(); 
+        fullName = Console.ReadLine();
+
+        Console.WriteLine("Введите свой Email: ");
+        email = Console.ReadLine();
 
         Console.WriteLine("Введите свой возраст: ");     
         age = Convert.ToInt32(Console.ReadLine());
@@ -27,6 +31,7 @@
         Console.WriteLine(
             patternOutputLine,
             fullName,
+            email,
             mathPoints,
             physicsPoints,
             programingPoints
